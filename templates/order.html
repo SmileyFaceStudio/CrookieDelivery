@@ -1,0 +1,18 @@
+
+<div class="row">
+	<div class="col-xs-6 text-center" ng-repeat="item in cookies">
+		<img src="http://icons.tinktank.club/assets/png/icon__cookie.png" height="200" />
+		<h4>{{item}}</h4>
+		<input type="number" ng-model="formData[item]"></input>
+	</div>
+</div>
+
+<br>
+
+<div class="form-group row">
+<div class="col-xs-6 col-xs-offset-3">
+    <a ui-sref="form.info" class="btn btn-block btn-info">
+    Next Section <span class="glyphicon glyphicon-circle-arrow-right"></span>
+    </a>
+</div>
+</div>
