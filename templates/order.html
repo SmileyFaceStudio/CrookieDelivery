@@ -1,8 +1,10 @@
-
+<div class="text-center">
+  <h4>All cookies are $5.00 each</h4>
+</div>
 <div class="row">
 	<div class="col-xs-6 text-center" ng-repeat="item in cookies">
 		<img src="http://icons.tinktank.club/assets/png/icon__cookie.png" height="200" />
-		<h4>{{item}}</h4>
+		<h4>{{item | underscoreless}}</h4>
 		<input type="number" ng-model="formData[item]"></input>
 	</div>
 </div>
