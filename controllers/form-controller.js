@@ -32,8 +32,9 @@ angular.module('formApp')
 
          $http.post('https://sheetsu.com/apis/2ae6fdf1', $scope.formData)
          .success(function(data, status) {
-            if data.success
-                alert('')
+            if (data.success) {
+                alert('Your order is successful! We will contact you when we deliver')
+            }
          })
     };
     
