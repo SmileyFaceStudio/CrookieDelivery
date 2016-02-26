@@ -37,5 +37,14 @@ angular.module('formApp')
             }
          })
     };
+
+    $scope.phoneNumberPattern = (function() {
+        var regexp = /^\(?(\d{3})\)?[ .-]?(\d{3})[ .-]?(\d{4})$/;
+        return {
+            test: function(value) {
+                return regexp.test(value);
+            }
+        };
+    })();
     
 });
