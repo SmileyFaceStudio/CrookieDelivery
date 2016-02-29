@@ -34,4 +34,11 @@ angular.module('formApp', ['ngAnimate', 'ui.router', 'ngMessages'])
     // catch all route
     // send users to the form page 
     $urlRouterProvider.otherwise('/form/order');
+})
+.run(function($rootScope, alertService) {
+    $rootScope.$on("$stateChangeStart", 
+        function (event, toState, toParams, fromState, fromParams) {
+            alertService.clear();
+        }
+    )
 });

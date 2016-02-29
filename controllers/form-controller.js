@@ -12,6 +12,16 @@ angular.module('formApp')
         }
     };
 
+    $scope.restrictSection = function(step) {
+        if (($state.current.name == 'form.order' && step == 2) || ($state.current.name == 'form.order' && step == 3)) {
+            return true;
+        } else if ($state.current.name == 'form.info' && step == 3) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
     $scope.nextSection = function(step) {
         switch (step) {
             case 1:
@@ -21,18 +31,32 @@ angular.module('formApp')
                 validateOrders();
                 break;
             case 3:
-                $state.go('form.payment');
+                validateInfo();
                 break;
+        }
+    }
+
+    var validateInfo = function() {
+        $scope.submitted = true;
+        var infoForm = $scope.appForm.infoForm;
+        if (infoForm.$valid == true) {
+            alertService.clear();
+            return $state.go('form.payment');
+        } else {
+            alertService.add("warning", "Please correct your information.");
+            $scope.$watch('appForm.infoForm.$valid', function(newValue) {
+                if (newValue == true) {
+                    return alertService.clear();
+                }
+            });
         }
     }
 
     var validateOrders = function() {
         var validated;
         angular.forEach($scope.formData.cookie, function(value, key) {
-          if (value > 0)
-            validated = true;
+          validated = (value > 0) ? true : false;
         })
-        // var orderForm = $scope.appForm.orderForm;
 
         $scope.$watch('formData.cookie', function(newValue) {
             angular.forEach(newValue, function(value) {
@@ -71,7 +95,9 @@ angular.module('formApp')
         $http.post('https://sheetsu.com/apis/2ae6fdf1', $scope.formData)
          .success(function(data, status) {
             if (data.success) {
-                alert('Your order is successful! We will contact you when we deliver')
+                alert('Your order is successful! We will contact you when we deliver');
+            } else if (!data.success) {
+                alertService.add('warning', "Something went wrong with your form! Contact Pirate Cookie Staff.");
             }
         })
     };
