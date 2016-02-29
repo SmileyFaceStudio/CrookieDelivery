@@ -56,6 +56,24 @@ pre {
     background:#00BC8C; 
 }
 
+.alert {
+    position: fixed;
+    top: 21px;
+    right: 20px;
+    z-index: 9999;
+    -webkit-transition: all ease .5s;
+    -o-transition: all ease .5s;
+    transition: all ease .5s;
+}
+
+/*.killed {
+    -webkit-transition: opacity ease 1s;
+         -o-transition: opacity ease 1s;
+            transition: opacity ease 1s;
+
+    opacity: 0;
+}*/
+
 /* ANIMATION STYLINGS
 ============================================================================= */
 #signup-form { 
