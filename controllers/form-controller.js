@@ -55,7 +55,7 @@ angular.module('formApp')
     var validateOrders = function() {
         var validated;
         angular.forEach($scope.formData.cookie, function(value, key) {
-          validated = (value > 0) ? true : false;
+          validated = (value > 0) ? true : null;
         })
 
         $scope.$watch('formData.cookie', function(newValue) {
@@ -66,7 +66,7 @@ angular.module('formApp')
             })
         }, true)
 
-        if (!validated) {
+        if (validated == false) {
           alertService.add("warning", "You need to add some cookies to your cart.");
         } else {
           alertService.clear();
