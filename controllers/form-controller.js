@@ -1,15 +1,13 @@
 angular.module('formApp')
-.controller('formController', function($scope, $http, alertService, $state) {
+.controller('formController', function($scope, $http, alertService, $state, $filter) {
     $scope.cookies = ['chocolate_chip', 'macadamian_nut', 'white_chocolate', 'oatmeal_raisin'];
 
     // we will store all of our form data in this object
     $scope.formData = {
-        cookie: {
             'oatmeal_raisin': 0,
             'macadamian_nut': 0,
             'white_chocolate': 0,
             'chocolate_chip': 0
-        }
     };
 
     $scope.restrictSection = function(step) {
@@ -54,17 +52,19 @@ angular.module('formApp')
 
     var validateOrders = function() {
         var validated;
-        angular.forEach($scope.formData.cookie, function(value, key) {
-          validated = (value > 0) ? true : false;
-        })
+        // angular.forEach($scope.formData.cookie, function(value, key) {
+        //   validated = (value > 0) ? true : false;
+        // })
 
-        $scope.$watch('formData.cookie', function(newValue) {
-            angular.forEach(newValue, function(value) {
-                if (value > 0) {
-                    return alertService.clear();
-                }
-            })
-        }, true)
+
+
+        // $scope.$watch('formData.cookie', function(newValue) {
+        //     angular.forEach(newValue, function(value) {
+        //         if (value > 0) {
+        //             return alertService.clear();
+        //         }
+        //     })
+        // }, true)
 
         if (!validated) {
           alertService.add("warning", "You need to add some cookies to your cart.");
@@ -81,25 +81,19 @@ angular.module('formApp')
         //         delete cookie;
         //     }
         // }
-        $scope.formData.Cookie = '';
-        angular.forEach($scope.formData.cookie, function(value, key) {
-            if (value == 0) {
-                delete $scope.formData.cookie[key];
-            }
-            else {
-                $scope.formData.Cookie += key + ' ' + value + ' ';
-            }
-        });
-        delete $scope.formData.cookie;
 
-        $http.post('https://sheetsu.com/apis/2ae6fdf1', $scope.formData)
-         .success(function(data, status) {
-            if (data.success) {
-                alert('Your order is successful! We will contact you when we deliver');
-            } else if (!data.success) {
-                alertService.add('warning', "Something went wrong with your form! Contact Pirate Cookie Staff.");
-            }
+        angular.forEach($scope.formData, function(value, key) {
+            key = $filter('underscoreless')(key);
         })
+        console.log($scope.formData);
+        // $http.post('https://sheetsu.com/apis/2ae6fdf1', $scope.formData)
+        //  .success(function(data, status) {
+        //     if (data.success) {
+        //         alert('Your order is successful! We will contact you when we deliver');
+        //     } else if (!data.success) {
+        //         alertService.add('warning', "Something went wrong with your form! Contact Pirate Cookie Staff.");
+        //     }
+        // })
     };
 
     $scope.phoneNumberPattern = (function() {
