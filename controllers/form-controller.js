@@ -56,8 +56,6 @@ angular.module('formApp')
         //   validated = (value > 0) ? true : false;
         // })
 
-
-
         // $scope.$watch('formData.cookie', function(newValue) {
         //     angular.forEach(newValue, function(value) {
         //         if (value > 0) {
@@ -66,7 +64,7 @@ angular.module('formApp')
         //     })
         // }, true)
 
-        if (!validated) {
+        if (validated == false) {
           alertService.add("warning", "You need to add some cookies to your cart.");
         } else {
           alertService.clear();
