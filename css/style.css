@@ -73,6 +73,28 @@ pre {
 
     opacity: 0;
 }*/
+
+/* Styles used for the counter. */
+.counter-container .counter-minus, .counter-plus {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    
+    background: #333;
+    color: white;
+    margin: 0;
+    padding: 5px 10px;
+    text-decoration: none;
+}
+
+.counter-container .counter-field {
+    margin: 0;
+    padding: 5px;
+    text-align: center;
+    width: 40px;
+}
+
 a[disabled] {
     pointer-events: none;
 }

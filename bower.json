@@ -1,0 +1,26 @@
+{
+  "name": "PirateKitchen",
+  "homepage": "https://github.com/mistermjtek/PirateKitchen",
+  "authors": [
+    "Michael Jeffrey Wu <michaeljeffreywu@gmail.com>"
+  ],
+  "description": "delivery application for pirate kitchen",
+  "main": "app.js",
+  "moduleType": [],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "www/lib",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "1.4.9",
+    "angular-messages": "1.4.9",
+    "angular-animate": "1.4.9",
+    "angular-ui-router": "0.2.18"
+  }
+}
