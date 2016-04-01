@@ -3,24 +3,22 @@
   {{alert.msg}}
 </div>
  -->
-<div class="text-center">
-  <h4>All cookies are $5.00 each</h4>
+<div class="text-center price-header">
+  <h2>All cookies are <span>$2</span> each</h2>
 </div>
-<div class="row">
-	<div class="col-xs-6 text-center" ng-repeat="item in cookies">
-		<img src="http://icons.tinktank.club/assets/png/icon__cookie.png" height="200" />
+<div class="row cookie-row">
+	<div class="col-sm-3 text-center" ng-repeat="item in cookies">
+    <div class="cookie-image">
+		  <img src="/assets/cookie_pic.png" height="100" />
+    </div>
 		<h4>{{item | underscoreless}}</h4>
 		<!-- <input type="number" ng-model="formData[item]" min="0"></input> -->
     <div counter value="formData[item]" min="0"></div>
 	</div>
 </div>
 
-<br>
+<br/>
 
-<div class="form-group row">
-<div class="col-xs-6 col-xs-offset-3">
-    <a ng-click="nextSection(2)" class="btn btn-block btn-info">
-    Next <span class="glyphicon glyphicon-circle-arrow-right"></span>
-    </a>
-</div>
-</div>
+<!-- <div class=""> -->
+  <img src="/assets/city_skyline.png" class="skyline">
+<!-- </div> -->

@@ -1,7 +1,7 @@
 angular.module('formApp')
 .controller('formController', function($scope, $http, alertService, $state, $filter) {
     $scope.cookies = ['chocolate_chip', 'macadamia_nut', 'white_chocolate', 'oatmeal_raisin'];
-
+    $scope.priceTotal = 0;
     // we will store all of our form data in this object
     $scope.formData = {
             'oatmeal_raisin': 0,
@@ -20,19 +20,27 @@ angular.module('formApp')
         }
     }
 
-    $scope.nextSection = function(step) {
-        switch (step) {
-            case 1:
-                $state.go('form.order');
-                break;
-            case 2:
-                validateOrders();
-                break;
-            case 3:
-                validateInfo();
-                break;
+    $scope.nextSection = function() {
+        if ($state.current.name == "form.order") {
+            return validateOrders();
+        } else if ($state.current.name == "form.order") {
+            return validateInfo();
+        } else if ($state.current.name == "form.payment") {
+            return alert('Order Submitted');
         }
+        // switch (step) {
+        //     case 1:
+        //         $state.go('form.order');
+        //         break;
+        //     case 2:
+        //         validateOrders();
+        //         break;
+        //     case 3:
+        //         validateInfo();
+        //         break;
+        // }
     }
+
 
     var validateInfo = function() {
         $scope.submitted = true;
@@ -53,6 +61,7 @@ angular.module('formApp')
     $scope.$watchGroup(['formData.macadamia_nut', 'formData.white_chocolate', 'formData.chocolate_chip', 'formData.oatmeal_raisin'], function(newValue) {
         $scope.ordersValid = false;
         angular.forEach(newValue, function(value) {
+            $scope.priceTotal += (2 * value);
             if (value > 0) {
                 return $scope.ordersValid = true;
             }

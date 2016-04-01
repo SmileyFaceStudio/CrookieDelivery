@@ -1,5 +1,5 @@
-<div class="row">
-<div class="col-sm-8 col-sm-offset-2">
+<div class="row"> -->
+<div>
 
   <div id="form-container">
   
@@ -9,10 +9,16 @@
           
           <!-- the links to our nested states using relative paths -->
           <!-- add the active class if the state matches our ui-sref -->
-          <div id="status-buttons" class="text-center">
-              <a ui-sref-active="active" ui-sref=".order"><span>1</span> Order</a>
-              <a ui-sref-active="active" ng-disabled="restrictSection(2)" ui-sref=".info"><span>2</span> Information</a>
-              <a ui-sref-active="active" ng-disabled="restrictSection(3)" ui-sref=".payment"><span>3</span> Payment</a>
+          <div id="status-buttons" class="text-center row">
+            <div class="col-xs-2 col-xs-offset-3">
+              <a ui-sref-active="active" ui-sref=".order"><span></span> Order</a>
+            </div>
+            <div class="col-xs-2">
+              <a ui-sref-active="active" ng-disabled="restrictSection(2)" ui-sref=".info"><span></span> Information</a>
+            </div>
+            <div class="col-xs-2">
+              <a ui-sref-active="active" ng-disabled="restrictSection(3)" ui-sref=".payment"><span></span> Payment</a>
+            </div>
           </div>
       </div>
       
@@ -27,8 +33,21 @@
           <!-- our nested state views will be injected here -->
           <div id="form-views" ui-view></div>
       </form>
+      <div class="bottom-section text-center">
+      <h1>{{priceTotal | currency}}</h1>
+<!-- <div class="form-group row">       -->
+<button class="btn" ng-click="nextSection()">
+      N e x t
+      </button>
+<!-- <div class="col-xs-2 col-xs-offset-5">
+    <a ng-click="nextSection(2)" class="btn btn-block">
+    Next
+    </a>
+</div> -->
+<!-- </div> -->
+</div>
   
   </div>
 
 </div>
-</div>
+<!-- </div>
