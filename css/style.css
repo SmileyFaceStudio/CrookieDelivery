@@ -39,7 +39,7 @@ pre {
 #status-buttons a { 
     /*color:#FFF;*/
     display:inline-block; 
-    font-size:12px; 
+    font-size:8pt; 
     /*margin-right:10px; */
     text-align:center; 
     text-transform:uppercase; 
@@ -94,11 +94,12 @@ pre {
     -ms-user-select: none;
     user-select: none;
     
-    background: #333;
-    color: white;
+    /*background: #333;*/
+    /*color: white;*/
+    font-size: 20pt;
     margin: 0;
-    padding: 5px 10px;
-    text-decoration: none;
+    padding: 5px 15px;
+    /*text-decoration: none;*/
 }
 
 .counter-container .counter-field {
@@ -106,6 +107,7 @@ pre {
     padding: 5px;
     text-align: center;
     width: 40px;
+    font-size: 40px;
 }
 
 a[disabled] {

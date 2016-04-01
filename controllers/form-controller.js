@@ -59,9 +59,9 @@ angular.module('formApp')
     }
 
     $scope.$watchGroup(['formData.macadamia_nut', 'formData.white_chocolate', 'formData.chocolate_chip', 'formData.oatmeal_raisin'], function(newValue) {
+        $scope.priceTotal = newValue.reduce(function(a, b) { return a + b; }) * 2;
         $scope.ordersValid = false;
         angular.forEach(newValue, function(value) {
-            $scope.priceTotal += (2 * value);
             if (value > 0) {
                 return $scope.ordersValid = true;
             }
