@@ -114,11 +114,7 @@ pre {
 }
 
 .counter-plus {
-<<<<<<< HEAD
-    background: url(assets/right_caret.svg) no-repeat;
-=======
     background: url(../assets/right_caret.svg) no-repeat;
->>>>>>> master
     margin-left: 21px;
 }
 
