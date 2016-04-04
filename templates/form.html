@@ -25,7 +25,7 @@
       <form id="signup-form" name="appForm" ng-submit="processForm()">
 
         <div class="alert alert-dismissible {{alert.type}}" ng-repeat="alert in alerts" type="alert.type">
-          <button type="button" class="close" ng-click="alert.close()" data-dismiss="alert">x</button>
+          <button type="button" class="close" ng-click="alert.close()" data-dismiss="alert"><span class="glyphicon glyphicon-remove"></span></button>
           {{alert.msg}}
         </div>
 

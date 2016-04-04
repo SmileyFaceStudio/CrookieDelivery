@@ -1,12 +1,8 @@
-<div class="alert alert-dismissible {{alert.type}}" ng-repeat="alert in alerts" type="alert.type">
-  <button type="button" class="close" ng-click="alert.close()" data-dismiss="alert">x</button>
-  {{alert.msg}}
-</div>
 <div class="text-center price-header">
   <h2>All cookies are <span>$2</span> each</h2>
 </div>
 <div class="row cookie-row">
-	<div class="col-sm-3 text-center" ng-repeat="item in cookies">
+	<div class="col-sm-3 text-center cookie-item" ng-repeat="item in cookies">
     <div class="cookie-image">
 		  <img src="assets/cookie_pic.png" height="100" />
     </div>
