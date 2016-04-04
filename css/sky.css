@@ -35,7 +35,7 @@
 .big-cloud {
 	width:100px;
 	height: 100px;
-	background:url(./assets/big_cloud.png) no-repeat;;
+	background:url(../assets/big_cloud.png) no-repeat;;
 	background-size: 90px;
     left: 60%;
     top: -32%;
