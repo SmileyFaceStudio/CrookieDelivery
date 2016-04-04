@@ -1,7 +1,7 @@
 .star {
   width: 10px;
   height: 10px;
-  background: url(/assets/star.png) no-repeat;
+  background: url(../assets/star.png) no-repeat;
   background-size: 6pt;  
   /*box-shadow: 0 0 3px #fff;*/
   position: absolute;
@@ -13,7 +13,7 @@
 .crook {
   width: 100px;
   height: 100px;
-  background: url(/assets/crook.png) no-repeat;
+  background: url(../assets/crook.png) no-repeat;
   background-size: 50px;  
   position: absolute;
   left: 0;
@@ -24,7 +24,7 @@
 .small-cloud {
 	width:100px;
 	height: 100px;
-	background:url(/assets/small_cloud.png) no-repeat;;
+	background:url(../assets/small_cloud.png) no-repeat;;
 	background-size: 60px;
     left: 20%;
     top: -12%;
@@ -35,7 +35,7 @@
 .big-cloud {
 	width:100px;
 	height: 100px;
-	background:url(/assets/big_cloud.png) no-repeat;;
+	background:url(./assets/big_cloud.png) no-repeat;;
 	background-size: 90px;
     left: 60%;
     top: -32%;

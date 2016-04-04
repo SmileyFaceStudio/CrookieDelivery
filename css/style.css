@@ -54,7 +54,7 @@ pre {
 
 #status-buttons span { 
     /*background:#080808; */
-    background: url(/assets/deselected_cookie.png) no-repeat;
+    background: url(../assets/deselected_cookie.png) no-repeat;
     background-size: 30px;
     display:block; 
     height:30px; 
@@ -67,7 +67,7 @@ pre {
 /* active buttons */
 #status-buttons a.active span { 
     /*background:#00BC8C; */
-    background: url(/assets/selected_cookie.png) no-repeat;
+    background: url(../assets/selected_cookie.png) no-repeat;
     background-size: 30px
 }
 
@@ -114,12 +114,12 @@ pre {
 }
 
 .counter-plus {
-    background: url(/assets/right_caret.svg) no-repeat;
+    background: url(../assets/right_caret.svg) no-repeat;
     margin-left: 21px;
 }
 
 .counter-minus {
-    background: url(/assets/left_caret.svg) no-repeat;
+    background: url(../assets/left_caret.svg) no-repeat;
 }
 
 a[disabled] {
