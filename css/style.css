@@ -21,6 +21,8 @@ pre {
 }
 
 #form-container .page-header { 
+    position:relative;
+    z-index:999;
     background:#ffffff; 
     margin:0; 
     padding:15px; 
@@ -94,11 +96,12 @@ pre {
     -ms-user-select: none;
     user-select: none;
     
-    /*background: #333;*/
-    /*color: white;*/
-    font-size: 20pt;
-    margin: 0;
-    padding: 5px 15px;
+    /* background: #333; */
+    /* color: white; */
+    font-size: 6pt;
+    margin: 0 20px;
+    display: inline-block;
+    padding: 10px 10px;
     /*text-decoration: none;*/
 }
 
@@ -108,6 +111,15 @@ pre {
     text-align: center;
     width: 40px;
     font-size: 40px;
+}
+
+.counter-plus {
+    background: url(/assets/right_caret.svg) no-repeat;
+    margin-left: 21px;
+}
+
+.counter-minus {
+    background: url(/assets/left_caret.svg) no-repeat;
 }
 
 a[disabled] {
@@ -137,12 +149,16 @@ a[disabled] {
 ============================================================================= */
 #signup-form { 
     position:relative; 
-    min-height:300px; 
-    overflow:hidden; 
+    min-height:42pc; 
+    overflow:hidden;
+    background:linear-gradient( 0deg, #F083C2,#FD9E97 75%, #FFBFA8 );
+/*    background-image: url("/assets/city_skyline.png");
+    background-size: 1440px auto;
+    background-repeat: no-repeat;
+    background-position: center bottom;*/
     /*z-index: -1;*/
     /*padding:30px;*/
-    background:linear-gradient( 0deg, #F083C2,#FD9E97 75%, #FFBFA8 );
-    height: 65vh;
+    /*padding-bottom: 30px;*/
 }
 
 /* basic styling for entering and leaving */
@@ -213,15 +229,25 @@ a[disabled] {
 
 .skyline {
     width: 100%;
-    position: absolute;
-    bottom: -75px;
-    left:0;
+    max-width: 1200px;
+    min-width: 900px;
+    height: auto;
+    /* position: absolute; */
+    /* overflow: hidden; */
+    /* bottom: -75px; */
+    /* left: 10%; */
+    /* right: -21%; */
+    display: block;
+    margin: auto;
+    margin-bottom: -80px;
+    margin-top: 30px;
 }
 
 .bottom-section {
-    /*background-color: #424242;*/
+    background-color: #424242;
     min-height: 300px;
     padding-top:65px;
+    position:relative;
 }
 
 .bottom-section h1 {
@@ -239,13 +265,24 @@ a[disabled] {
     margin-top:10px;
 }
 
+.bottom-section .footer {
+    text-transform: uppercase;
+    color: white;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 0 20px;
+}
+
 .btn:focus, .btn:active, .btn:active:focus {
     outline: none;
 }
 
 .price-header {
-    margin-top: 40px;
-    margin-bottom: 30px;
+/*    margin-top: 40px;
+    margin-bottom: 30px;*/
+    padding: 30px 20px;
     text-transform: uppercase;
 }
 
@@ -255,4 +292,11 @@ a[disabled] {
 .price-header span {
     color: #ffffff;
     font-size: 40px;
+}
+
+.full-form {
+}
+
+.sky {
+    position: relative;
 }

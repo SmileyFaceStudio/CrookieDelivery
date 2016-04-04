@@ -3,9 +3,9 @@ angular.module('formApp')
     return {
         restrict: 'A',
         scope: { value: '=value' },
-        template: '<span class="counter-minus glyphicon glyphicon-triangle-left" ng-click="minus()"></span>\
+        template: '<span class="counter-minus" ng-click="minus()"></span>\
                   <span class="counter-field">{{value}}</span>\
-                  <span class="counter-plus glyphicon glyphicon-triangle-right" ng-click="plus()"></span>',
+                  <span class="counter-plus" ng-click="plus()"></span>',
         link: function( scope , element , attributes ) {
             // Make sure the value attribute is not missing.
             if ( angular.isUndefined(scope.value) ) {

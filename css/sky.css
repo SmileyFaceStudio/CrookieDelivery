@@ -25,9 +25,9 @@
 	width:100px;
 	height: 100px;
 	background:url(/assets/small_cloud.png) no-repeat;;
-	background-size: 100px;
-	left: 20%;
-	top: 65%;
+	background-size: 60px;
+    left: 20%;
+    top: -12%;
 	position:absolute;
 	animation: cloud2 60s infinite;
 }
@@ -36,70 +36,79 @@
 	width:100px;
 	height: 100px;
 	background:url(/assets/big_cloud.png) no-repeat;;
-	background-size: 100px;
-	left: 60%;
-	top: 65%;
+	background-size: 90px;
+    left: 60%;
+    top: -32%;
 	position:absolute;
 	animation: cloud1 60s infinite;
 }
 
+.star0 {
+  left: 13%;
+  top: -12%;
+  -webkit-animation: twinkle 0.5s alternate infinite;
+          animation: twinkle 0.5s alternate infinite;
+  -webkit-animation-delay: 3.2451s;
+          animation-delay: 3.2451s;
+}
+
 .star1 {
-  left: 71%;
-  top: 77%;
-  -webkit-animation: twinkle 0.75s alternate infinite;
-          animation: twinkle 0.75s alternate infinite;
-  -webkit-animation-delay: 1.08451s;
-          animation-delay: 1.08451s;
+  left: 23%;
+  top: 12%;
+  -webkit-animation: twinkle 0.5s alternate infinite;
+          animation: twinkle 0.5s alternate infinite;
+  -webkit-animation-delay: 1.2451s;
+          animation-delay: 1.2451s;
 }
 
 .star2 {
-  left: 30%;
-  top: 52%;
+  left: 32%;
+  top: -18%;
   -webkit-animation: twinkle 0.75s alternate infinite;
           animation: twinkle 0.75s alternate infinite;
-  -webkit-animation-delay: 1.08451s;
-          animation-delay: 1.08451s;
+  -webkit-animation-delay: 6.5451s;
+          animation-delay: 6.5451s;
 }
 
 .star3 {
-  left: 34%;
-  top: 66%;
+  left: 41%;
+  top: 5%;
   -webkit-animation: twinkle 0.75s alternate infinite;
           animation: twinkle 0.75s alternate infinite;
-  -webkit-animation-delay: 1.08451s;
-          animation-delay: 1.08451s;
+  -webkit-animation-delay: 3.08451s;
+          animation-delay: 3.08451s;
 }
 
 .star4 {
-  left: 69%;
-  top: 58%;
-  -webkit-animation: twinkle 0.75s alternate infinite;
-          animation: twinkle 0.75s alternate infinite;
-  -webkit-animation-delay: 1.08451s;
-          animation-delay: 1.08451s;
+  left: 62%;
+  top: 0;
+  -webkit-animation: twinkle 0.5s alternate infinite;
+          animation: twinkle 0.5s alternate infinite;
+  -webkit-animation-delay: 2.08451s;
+          animation-delay: 2.08451s;
 }
 
 .star5 {
-  left: 65%;
-  top: 74%;
+  left: 70%;
+  top: -22%;
   -webkit-animation: twinkle 0.75s alternate infinite;
           animation: twinkle 0.75s alternate infinite;
-  -webkit-animation-delay: 1.08451s;
-          animation-delay: 1.08451s;
+  -webkit-animation-delay: 1.8451s;
+          animation-delay: 1.8451s;
 }
 
 .star6 {
-  left: 80%;
-  top: 56%;
-  -webkit-animation: twinkle 0.75s alternate infinite;
-          animation: twinkle 0.75s alternate infinite;
-  -webkit-animation-delay: 1.08451s;
-          animation-delay: 1.08451s;
+  left: 81%;
+  top: 7%;
+  -webkit-animation: twinkle 0.5s alternate infinite;
+          animation: twinkle 0.5s alternate infinite;
+  -webkit-animation-delay: 0.8451s;
+          animation-delay: 0.8451s;
 }
 
 .star7 {
-  left: 27%;
-  top: 75%;
+  left: 88%;
+  top: -15%;
   -webkit-animation: twinkle 0.75s alternate infinite;
           animation: twinkle 0.75s alternate infinite;
   -webkit-animation-delay: 1.08451s;
@@ -182,7 +191,7 @@
 
 	}
 	30% {
-
+		top: 20%;
 	}
 	35% {
 
