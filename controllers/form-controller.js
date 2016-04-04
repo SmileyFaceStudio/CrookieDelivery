@@ -23,7 +23,7 @@ angular.module('formApp')
     $scope.nextSection = function() {
         if ($state.current.name == "form.order") {
             return validateOrders();
-        } else if ($state.current.name == "form.order") {
+        } else if ($state.current.name == "form.info") {
             return validateInfo();
         } else if ($state.current.name == "form.payment") {
             return alert('Order Submitted');
