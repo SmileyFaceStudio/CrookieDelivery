@@ -1,6 +1,24 @@
 angular.module('formApp')
 .controller('formController', function($scope, $http, alertService, $state, $filter) {
-    $scope.cookies = ['chocolate_chip', 'macadamia_nut', 'white_chocolate', 'oatmeal_raisin'];
+    // $scope.cookies = ['chocolate_chip', 'macadamia_nut', 'white_chocolate', 'oatmeal_raisin'];
+    $scope.cookies = {
+        'chocolate_chip': {
+            name: 'Chocolate Chip',
+            image: 'assets/black_cookie.svg'
+        },
+        'macadamia_nut': {
+            name: 'Macadamia Nut',
+            image: 'assets/yellow_cookie.svg'
+        },
+        'white_chocolate': {
+            name: 'White Chocolate',
+            image: 'assets/pink_cookie.svg'
+        },
+        'oatmeal_raisin': {
+            name: 'Oatmeal Raisin',
+            image: 'assets/cookie_pic.png'
+        }
+    }
     $scope.priceTotal = 0;
     // we will store all of our form data in this object
     $scope.formData = {

@@ -2,13 +2,13 @@
   <h2>All cookies are <span>$2</span> each</h2>
 </div>
 <div class="row cookie-row">
-	<div class="col-sm-3 text-center cookie-item" ng-repeat="item in cookies">
+	<div class="col-sm-3 text-center cookie-item" ng-repeat="(index, value) in cookies">
     <div class="cookie-image">
-		  <img src="assets/cookie_pic.png" height="100" />
+		  <img ng-src="{{value.image}}" height="100" />
     </div>
-		<h3>{{item | underscoreless}}</h3>
+		<h3>{{value.name}}</h3>
 		<!-- <input type="number" ng-model="formData[item]" min="0"></input> -->
-    <div counter value="formData[item]" min="0"></div>
+    <div counter value="formData[index]" min="0"></div>
 	</div>
 </div>
 

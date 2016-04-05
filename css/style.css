@@ -209,6 +209,11 @@ a[disabled] {
     position: relative;
 }
 
+.logo {
+    margin-top: 10px;
+    margin-bottom: 25px;
+}
+
 /* Alert Styling */
 .alert.ng-enter, .alert.ng-leave
 { 
