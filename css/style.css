@@ -1,10 +1,32 @@
 /* BASIC STYLINGS
 ============================================================================= */
-@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:600,700);
+@font-face {
+  font-family: 'MuseoSansRounded';
+  src: url('../assets/fonts/museosansrounded-500-webfont.eot'); /* IE9 Compat Modes */
+  src: url('../assets/fonts/museosansrounded-500-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../assets/fonts/museosansrounded-500-webfont.woff2') format('woff2'), 
+       url('../assets/fonts/museosansrounded-500-webfont.woff') format('woff'),
+       url('../assets/fonts/museosansrounded-500-webfont.ttf')  format('truetype'),
+       url('../assets/fonts/museosansrounded-500-webfont.svg#museo_sans_rounded500') format('svg');
+       font-weight:500;
+       font-style: normal;
+}
+
+@font-face {
+    font-family:'MuseoSansRounded';
+    src: url('../assets/fonts/museosansrounded-300-webfont.eot');
+    src: url('../assets/fonts/museosansrounded-300-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../assets/fonts/museosansrounded-300-webfont.woff') format('woff'),
+         url('../assets/fonts/museosansrounded-300-webfont.ttf') format('truetype'),
+         url('../assets/fonts/museosansrounded-300-webfont.svg#museo_sans_rounded300') format('svg');
+    font-weight:300;
+    font-style:normal;
+}
 
 body {
-    font-family:"museo-sans", sans-serif;
+    font-family:"MuseoSansRounded", sans-serif;
     color:#424242;
+    font-weight: 300;
     overflow-x: hidden;
     padding-bottom: 20px;
     background-color: #424242;
@@ -34,10 +56,6 @@ pre {
 }
 
 /* numbered buttons */
-#status-buttons {  
-
-}
-
 #status-buttons a { 
     /*color:#FFF;*/
     display:inline-block; 
@@ -111,6 +129,7 @@ pre {
     text-align: center;
     width: 40px;
     font-size: 40px;
+    font-weight:500;
 }
 
 .counter-plus {
@@ -124,94 +143,6 @@ pre {
 
 a[disabled] {
     pointer-events: none;
-}
-
-.alert.ng-enter, .alert.ng-leave
-{ 
-  -webkit-transition: 400ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
-  -moz-transition: 400ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
-  -ms-transition: 400ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
-  -o-transition: 400ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
-  transition: 400ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
-} 
- 
-.alert.ng-enter.ng-enter-active, 
-.alert.ng-leave {
-  opacity: 1;
-}
- 
-.alert.ng-leave.ng-leave-active,
-.alert.ng-enter {
-  opacity: 0;
-}
-
-/* ANIMATION STYLINGS
-============================================================================= */
-#signup-form { 
-    position:relative; 
-    min-height:42pc; 
-    overflow:hidden;
-    background:linear-gradient( 0deg, #F083C2,#FD9E97 75%, #FFBFA8 );
-/*    background-image: url("/assets/city_skyline.png");
-    background-size: 1440px auto;
-    background-repeat: no-repeat;
-    background-position: center bottom;*/
-    /*z-index: -1;*/
-    /*padding:30px;*/
-    /*padding-bottom: 30px;*/
-}
-
-/* basic styling for entering and leaving */
-/* left and right added to ensure full width */
-#form-views.ng-enter,
-#form-views.ng-leave { 
-    position:absolute; 
-    left:30px; 
-    right:30px;
-/*    transition:2s all ease; 
-    -moz-transition:2s all ease; 
-    -webkit-transition:2s all ease; */
-}
-    
-/* enter animation */
-/*#form-views.ng-enter { 
-    -webkit-animation:slideInRight 0.5s both ease;
-    -moz-animation:slideInRight 0.5s both ease;
-    animation:slideInRight 0.5s both ease; 
-}*/
-
-/* leave animation */
-/*#form-views.ng-leave { 
-    -webkit-animation:slideOutLeft 0.5s both ease;
-    -moz-animation:slideOutLeft 0.5s both ease;
-    animation:slideOutLeft 0.5s both ease;   
-}*/
-
-/* ANIMATIONS
-============================================================================= */
-/* slide out to the left */
-@keyframes slideOutLeft {
-    to   { transform: translateX(-200%); }
-}
-@-moz-keyframes slideOutLeft {  
-    to   { -moz-transform: translateX(-200%); }
-}
-@-webkit-keyframes slideOutLeft {
-    to   { -webkit-transform: translateX(-200%); }
-}
-
-/* slide in from the right */
-@keyframes slideInRight {
-    from { transform:translateX(200%); }
-    to   { transform: translateX(0); }
-}
-@-moz-keyframes slideInRight {
-    from { -moz-transform:translateX(200%); }
-    to   { -moz-transform: translateX(0); }
-}
-@-webkit-keyframes slideInRight {
-    from { -webkit-transform:translateX(200%); }
-    to   { -webkit-transform: translateX(0); }
 }
 
 .cookie-image {
@@ -238,8 +169,12 @@ a[disabled] {
     /* right: -21%; */
     display: block;
     margin: auto;
+<<<<<<< HEAD
     margin-bottom: -88px;
     margin-top: 30px;
+=======
+    margin-bottom: -100px;
+>>>>>>> master
 }
 
 .bottom-section {
@@ -293,9 +228,104 @@ a[disabled] {
     font-size: 40px;
 }
 
-.full-form {
+.cookie-row .cookie-item {
+    padding-bottom: 30px;
 }
 
 .sky {
     position: relative;
+}
+
+.logo {
+    margin-top: 10px;
+    margin-bottom: 25px;
+}
+
+/* Alert Styling */
+.alert.ng-enter, .alert.ng-leave
+{ 
+  -webkit-transition: 400ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+  -moz-transition: 400ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+  -ms-transition: 400ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+  -o-transition: 400ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+  transition: 400ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+} 
+ 
+.alert.ng-enter.ng-enter-active, 
+.alert.ng-leave {
+  opacity: 1;
+}
+ 
+.alert.ng-leave.ng-leave-active,
+.alert.ng-enter {
+  opacity: 0;
+}
+
+/* ANIMATION STYLINGS
+============================================================================= */
+#signup-form { 
+    position:relative; 
+    min-height:42pc; 
+    overflow:hidden;
+    background:linear-gradient( 0deg, #F083C2,#FD9E97 75%, #FFBFA8 );
+/*    background-image: url("/assets/city_skyline.png");
+    background-size: 1440px auto;
+    background-repeat: no-repeat;
+    background-position: center bottom;*/
+    /*z-index: -1;*/
+    /*padding:30px;*/
+    /*padding-bottom: 30px;*/
+}
+
+/* basic styling for entering and leaving */
+/* left and right added to ensure full width */
+#form-views.ng-enter,
+#form-views.ng-leave { 
+    position:absolute; 
+    left:30px; 
+    right:30px;
+    transition:2s all ease; 
+    -moz-transition:2s all ease; 
+    -webkit-transition:2s all ease; 
+}
+    
+/* enter animation */
+#form-views.ng-enter { 
+    -webkit-animation:slideInRight 0.5s both ease;
+    -moz-animation:slideInRight 0.5s both ease;
+    animation:slideInRight 0.5s both ease; 
+}
+
+/* leave animation */
+#form-views.ng-leave { 
+    -webkit-animation:slideOutLeft 0.5s both ease;
+    -moz-animation:slideOutLeft 0.5s both ease;
+    animation:slideOutLeft 0.5s both ease;   
+}
+
+/* ANIMATIONS
+============================================================================= */
+/* slide out to the left */
+@keyframes slideOutLeft {
+    to   { transform: translateX(-200%); }
+}
+@-moz-keyframes slideOutLeft {  
+    to   { -moz-transform: translateX(-200%); }
+}
+@-webkit-keyframes slideOutLeft {
+    to   { -webkit-transform: translateX(-200%); }
+}
+
+/* slide in from the right */
+@keyframes slideInRight {
+    from { transform:translateX(200%); }
+    to   { transform: translateX(0); }
+}
+@-moz-keyframes slideInRight {
+    from { -moz-transform:translateX(200%); }
+    to   { -moz-transform: translateX(0); }
+}
+@-webkit-keyframes slideInRight {
+    from { -webkit-transform:translateX(200%); }
+    to   { -webkit-transform: translateX(0); }
 }

@@ -1,6 +1,24 @@
 angular.module('formApp')
 .controller('formController', function($scope, $http, alertService, $state, $filter) {
-    $scope.cookies = ['chocolate_chip', 'macadamia_nut', 'white_chocolate', 'oatmeal_raisin'];
+    // $scope.cookies = ['chocolate_chip', 'macadamia_nut', 'white_chocolate', 'oatmeal_raisin'];
+    $scope.cookies = {
+        'chocolate_chip': {
+            name: 'Chocolate Chip',
+            image: 'assets/black_cookie.svg'
+        },
+        'macadamia_nut': {
+            name: 'Macadamia Nut',
+            image: 'assets/yellow_cookie.svg'
+        },
+        'white_chocolate': {
+            name: 'White Chocolate',
+            image: 'assets/pink_cookie.svg'
+        },
+        'oatmeal_raisin': {
+            name: 'Oatmeal Raisin',
+            image: 'assets/cookie_pic.png'
+        }
+    }
     $scope.priceTotal = 0;
     // we will store all of our form data in this object
     $scope.formData = {
@@ -23,9 +41,9 @@ angular.module('formApp')
     $scope.nextSection = function() {
         if ($state.current.name == "form.order") {
             return validateOrders();
-        } else if ($state.current.name == "form.order") {
+        } else if ($state.current.name == "form.info") {
             return validateInfo();
-        } else if ($state.current.name == "form.payment") {
+        } else if ($state.current.name == "form.review") {
             return alert('Order Submitted');
         }
         // switch (step) {
@@ -47,7 +65,7 @@ angular.module('formApp')
         var infoForm = $scope.appForm.infoForm;
         if (infoForm.$valid == true) {
             alertService.clear();
-            return $state.go('form.payment');
+            return $state.go('form.review');
         } else {
             alertService.add("warning", "Please correct your information.");
             $scope.$watch('appForm.infoForm.$valid', function(newValue) {
