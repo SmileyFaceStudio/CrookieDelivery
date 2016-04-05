@@ -26,9 +26,9 @@ angular.module('formApp', ['ngAnimate', 'ui.router', 'ngMessages'])
             templateUrl: 'templates/info.html'
         })
         
-        .state('form.payment', {
-            url: '/payment',
-            templateUrl: 'templates/payment.html'
+        .state('form.review', {
+            url: '/review',
+            templateUrl: 'templates/review.html'
         });
        
     // catch all route

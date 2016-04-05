@@ -25,7 +25,7 @@ angular.module('formApp')
             return validateOrders();
         } else if ($state.current.name == "form.info") {
             return validateInfo();
-        } else if ($state.current.name == "form.payment") {
+        } else if ($state.current.name == "form.review") {
             return alert('Order Submitted');
         }
         // switch (step) {
@@ -47,7 +47,7 @@ angular.module('formApp')
         var infoForm = $scope.appForm.infoForm;
         if (infoForm.$valid == true) {
             alertService.clear();
-            return $state.go('form.payment');
+            return $state.go('form.review');
         } else {
             alertService.add("warning", "Please correct your information.");
             $scope.$watch('appForm.infoForm.$valid', function(newValue) {
