@@ -16,7 +16,7 @@ angular.module('formApp')
         },
         'oatmeal_raisin': {
             name: 'Oatmeal Raisin',
-            image: 'assets/cookie_pic.png'
+            image: 'assets/brown_cookie.svg'
         }
     }
     $scope.priceTotal = 0;
@@ -38,13 +38,21 @@ angular.module('formApp')
         }
     }
 
+    $scope.nextText = function() {
+        if ($state.current.name == "form.review") {
+            return 'Submit';
+        } else {
+            return 'N e x t';
+        }
+    }
+
     $scope.nextSection = function() {
         if ($state.current.name == "form.order") {
             return validateOrders();
         } else if ($state.current.name == "form.info") {
             return validateInfo();
         } else if ($state.current.name == "form.review") {
-            return alert('Order Submitted');
+            return processForm();
         }
         // switch (step) {
         //     case 1:
