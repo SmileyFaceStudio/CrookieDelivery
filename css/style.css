@@ -1,9 +1,19 @@
 /* BASIC STYLINGS
 ============================================================================= */
-@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:600,700);
+@font-face {
+  font-family: 'MuseoSansRounded';
+  src: url('../assets/fonts/museosansrounded-500-webfont.eot'); /* IE9 Compat Modes */
+  src: url('../assets/fonts/museosansrounded-500-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../assets/fonts/museosansrounded-500-webfont.woff2') format('woff2'), 
+       url('../assets/fonts/museosansrounded-500-webfont.woff') format('woff'),
+       url('../assets/fonts/museosansrounded-500-webfont.ttf')  format('truetype'),
+       url('../assets/fonts/museosansrounded-500-webfont.svg#museo_sans_rounded500') format('svg');
+       font-weight:300;
+       font-style: normal;
+}
 
 body {
-    font-family:"museo-sans", sans-serif;
+    font-family:"MuseoSansRounded", sans-serif;
     color:#424242;
     overflow-x: hidden;
     padding-bottom: 20px;
