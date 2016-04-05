@@ -169,12 +169,8 @@ a[disabled] {
     /* right: -21%; */
     display: block;
     margin: auto;
-<<<<<<< HEAD
     margin-bottom: -100px;
     margin-top: 30px;
-=======
-    margin-bottom: -100px;
->>>>>>> master
 }
 
 .bottom-section {
