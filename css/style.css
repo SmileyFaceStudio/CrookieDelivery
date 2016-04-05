@@ -160,7 +160,6 @@ a[disabled] {
 
 .skyline {
     width: 100%;
-    max-width: 1200px;
     min-width: 900px;
     height: auto;
     /* position: absolute; */
@@ -170,7 +169,7 @@ a[disabled] {
     /* right: -21%; */
     display: block;
     margin: auto;
-    margin-bottom: -88px;
+    margin-bottom: -100px;
 }
 
 .bottom-section {
