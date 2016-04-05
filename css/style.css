@@ -8,13 +8,25 @@
        url('../assets/fonts/museosansrounded-500-webfont.woff') format('woff'),
        url('../assets/fonts/museosansrounded-500-webfont.ttf')  format('truetype'),
        url('../assets/fonts/museosansrounded-500-webfont.svg#museo_sans_rounded500') format('svg');
-       font-weight:300;
+       font-weight:500;
        font-style: normal;
+}
+
+@font-face {
+    font-family:'MuseoSansRounded';
+    src: url('../assets/fonts/museosansrounded-300-webfont.eot');
+    src: url('../assets/fonts/museosansrounded-300-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../assets/fonts/museosansrounded-300-webfont.woff') format('woff'),
+         url('../assets/fonts/museosansrounded-300-webfont.ttf') format('truetype'),
+         url('../assets/fonts/museosansrounded-300-webfont.svg#museo_sans_rounded300') format('svg');
+    font-weight:300;
+    font-style:normal;
 }
 
 body {
     font-family:"MuseoSansRounded", sans-serif;
     color:#424242;
+    font-weight: 300;
     overflow-x: hidden;
     padding-bottom: 20px;
     background-color: #424242;
@@ -117,6 +129,7 @@ pre {
     text-align: center;
     width: 40px;
     font-size: 40px;
+    font-weight:500;
 }
 
 .counter-plus {
