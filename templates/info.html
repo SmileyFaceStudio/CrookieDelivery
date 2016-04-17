@@ -1,42 +1,49 @@
 <ng-form name="infoForm">
-<div class="container">
-<div class="form-group">
-    <label for="name">Name</label>
-    <input type="text" class="form-control" name="name" ng-model="formData.Name" required>
+<div class="container info-screen">
+<div class="text-center price-header">
+  <h2>The Lowdown</h2>
+</div>
+<div class="row">
+<div class="form-group info-inputs col-md-6">
+    <label for="name">Who ordered the Heist?</label>
+    <input type="text" class="form-control" name="name" ng-model="formData.Name" placeholder="Your name..." required>
     <div ng-messages="infoForm.name.$error" ng-if="submitted && infoForm.name.$invalid" role="alert" class="help-block">
         <div ng-messages-include="templates/messages.html"></div>
     </div>
 </div>
 
 
-<div class="form-group">
-    <label for="email">Email</label>
-    <input type="text" class="form-control" name="email" ng-model="formData.Email" required>
+<div class="form-group info-inputs col-md-6">
+    <label for="email">Non Traceable Email</label>
+    <input type="text" class="form-control" name="email" ng-model="formData.Email" placeholder="joe@gmail.com" required>
     <div ng-messages="infoForm.email.$error" ng-if="submitted && infoForm.email.$invalid" role="alert" class="help-block">
         <div ng-messages-include="templates/messages.html"></div>
     </div>
 </div>
 
 
-<div class="form-group">
-    <label for="email">Phone Number</label>
-    <input type="text" class="form-control" name="phone_number" ng-model="formData.Phone" ng-pattern="phoneNumberPattern" required>
+<div class="form-group info-inputs col-md-6">
+    <label for="email">Self Destructing Phone No</label>
+    <input type="text" class="form-control" name="phone_number" ng-model="formData.Phone" ng-pattern="phoneNumberPattern" placeholder="555 555 5555" required>
     <div ng-messages="infoForm.phone_number.$error" ng-if="submitted && infoForm.phone_number.$invalid" role="alert" class="help-block">
         <div ng-messages-include="templates/messages.html"></div>
     </div>
 </div>
 
-<div class="form-group">
-    <label for="email">Pick up Location</label>
+<div class="form-group info-inputs col-md-6">
+    <label for="email">Where we dropping the goods?</label>
     <select type="text" class="form-control" name="pickup" ng-model="formData.Pickup">
-        <option>Sixth College</option>
+        <option selected>Sixth College</option>
         <option>Thurgood Marshall College</option>
+        <option>Eleanor Roosevelt College</option>
+        <option>Revelle College</option>
+        <option>Muir College</option>
     </select>
 </div>
+</div>
 
-<div class="form-group">
-    <label for="email">Notes</label>
-    <textarea type="text" class="form-control" name="notes" ng-model="formData.Notes"></textarea> 
+<div class="form-group info-inputs">
+    <textarea type="text" class="form-control" name="notes" ng-model="formData.Notes" placeholder="Any special instructions boss?"></textarea> 
 </div>
 </div>
 

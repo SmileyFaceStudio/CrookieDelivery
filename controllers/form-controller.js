@@ -38,9 +38,14 @@ angular.module('formApp')
         }
     }
 
+    $scope.onlyOrderScreen = function () {
+        if ($state.current.name == 'form.order')
+            return true;
+    }
+
     $scope.nextText = function() {
         if ($state.current.name == "form.review") {
-            return 'Submit';
+            return 'D o n e';
         } else {
             return 'N e x t';
         }
@@ -67,12 +72,31 @@ angular.module('formApp')
         // }
     }
 
+    $scope.previousSection = function() {
+        if ($state.current.name == "form.info") {
+            return $state.go("form.order");
+        } else if ($state.current.name == "form.review") {
+            return $state.go("form.info");
+        }
+    }
+
+    var cloneFormdata = function() {
+        $scope.reviewData = {};
+        angular.copy($scope.formData, $scope.reviewData);
+        delete $scope.reviewData['Email'];
+        delete $scope.reviewData['Name'];
+        delete $scope.reviewData['Phone'];
+        delete $scope.reviewData['Notes'];
+        delete $scope.reviewData['Pickup'];
+    }
+
 
     var validateInfo = function() {
         $scope.submitted = true;
         var infoForm = $scope.appForm.infoForm;
         if (infoForm.$valid == true) {
             alertService.clear();
+            cloneFormdata();
             return $state.go('form.review');
         } else {
             alertService.add("warning", "Please correct your information.");

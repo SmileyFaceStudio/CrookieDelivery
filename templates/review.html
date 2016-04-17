@@ -1,13 +1,15 @@
-<div class="text-center">
-<!--     <span class="glyphicon glyphicon-heart"></span>
-    <h3>Thanks For Your Money!</h3> -->
-    <h2>Order Information</h4>
-    <h4 ng-repeat="(index, value) in formData">{{index | underscoreless}}: {{value}}</h4>
-<!--     <p>Macadamia Nut: {{formData.macadamia_nut}}</p>
-    <p>White Chocolate: {{formData.white_chocolate}}</p>
-    <p>Chocolate Chip: {{formData.chocolate_chip}}</p>
-    <p>Oatmeal Raisin: {{formData.oatmeal_raisin}}</p> -->
+<div class="text-center price-header">
+	<h2>The Ransom</h2>
+	<h4>Look Bub, these cookies ain't free, you see?</h4>
+</div>
 
-<!-- 	<h4>Customer Information</h4>
-	<p>  -->
+<div class="text-center">
+	<div class="item-list">
+    <h2 ng-repeat="(index, value) in reviewData" ng-hide="value == 0"><span>{{value}}</span> {{index | underscoreless | uppercase}}</h2>
+    </div>
+
+    <div class="contact-info">
+    	<h2> WE'LL CONTACT <span>{{formData.Name | uppercase}}</span> at <span>{{formData.Pickup | uppercase}}</span></h2>
+    	<h2>HAVE <span>{{priceTotal | currency}} CASH</span> or <span>VENMO</span></h2>
+    </div>
 </div>

@@ -228,6 +228,11 @@ a[disabled] {
     padding-bottom: 30px;
 }
 
+.sky-container {
+    position: absolute;
+    bottom:0;
+}
+
 .sky {
     position: relative;
 }
@@ -235,6 +240,40 @@ a[disabled] {
 .logo {
     margin-top: 10px;
     margin-bottom: 25px;
+}
+
+.info-inputs label {
+    text-transform: uppercase;
+    font-size: 15px;
+}
+
+.info-inputs input,.info-inputs select, .info-inputs textarea {
+    height: 60px;
+    font-size: 25px;
+    font-weight: 500;
+    border-radius: 10px;
+}
+
+.info-inputs textarea {
+    margin-top: 10px;
+    height:140px;
+}
+
+.info-inputs {
+    margin-bottom: 30px;
+}
+
+.info-screen {
+    padding-right: 25px;
+    padding-left: 25px;
+}
+
+.item-list span, .contact-info span{
+    color: white;
+}
+
+.contact-info {
+    margin-top: 7.5vh;
 }
 
 /* Alert Styling */
@@ -261,7 +300,7 @@ a[disabled] {
 ============================================================================= */
 #signup-form { 
     position:relative; 
-    min-height:42pc; 
+    min-height:50pc; 
     overflow:hidden;
     background:linear-gradient( 0deg, #F083C2,#FD9E97 75%, #FFBFA8 );
 /*    background-image: url("/assets/city_skyline.png");
@@ -287,16 +326,16 @@ a[disabled] {
     
 /* enter animation */
 #form-views.ng-enter { 
-    -webkit-animation:slideInRight 1s both ease;
-    -moz-animation:slideInRight 1s both ease;
-    animation:slideInRight 1s both ease; 
+    -webkit-animation:slideInRight 1.5s both ease;
+    -moz-animation:slideInRight 1.5s both ease;
+    animation:slideInRight 1.5s both ease; 
 }
 
 /* leave animation */
 #form-views.ng-leave { 
-    -webkit-animation:slideOutLeft 1s both ease;
-    -moz-animation:slideOutLeft 1s both ease;
-    animation:slideOutLeft 1s both ease;   
+    -webkit-animation:slideOutLeft 1.5s both ease;
+    -moz-animation:slideOutLeft 1.5s both ease;
+    animation:slideOutLeft 1.5s both ease;   
 }
 
 /* ANIMATIONS

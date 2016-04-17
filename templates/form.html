@@ -10,10 +10,10 @@
               <a ui-sref-active="active" ui-sref=".order"><span></span>Order</a>
             </div>
             <div class="col-xs-2">
-              <a ui-sref-active="active" ng-disabled="restrictSection(2)" ui-sref=".info"><span></span>Info</a>
+              <a ui-sref-active="active" ng-disabled="restrictSection(2)" ui-sref=".info"><span></span>Lowdown</a>
             </div>
             <div class="col-xs-2">
-              <a ui-sref-active="active" ng-disabled="restrictSection(3)" ui-sref=".review"><span></span>Review</a>
+              <a ui-sref-active="active" ng-disabled="restrictSection(3)" ui-sref=".review"><span></span>Ransom</a>
             </div>
           </div>
       </div>
@@ -29,10 +29,30 @@
 
           <!-- our nested state views will be injected here -->
           <div id="form-views" ui-view></div>
+          <div class="sky-container">
+          <div class="sky">
+  <!-- <div class="crook"></div> -->
+  <div class="small-cloud"></div>
+  <div class="big-cloud"></div>
+  <div class="star star0"></div>
+  <div class="star star1"></div>
+  <div class="star star2"></div>
+  <div class="star star3"></div>
+  <div class="star star4"></div>
+  <div class="star star5"></div>
+  <div class="star star6"></div>
+  <div class="star star7"></div>
+  <!-- <div class="skyline"> -->
+    <img src="assets/city_skyline_fullparallax.svg" class="skyline">
+  <!-- </div> -->
+</div>
+</div>
       </form>
       <div class="bottom-section text-center">
-        <h1>{{priceTotal | currency}}</h1>
+        <h1 ng-show="onlyOrderScreen()">{{priceTotal | currency}}</h1>
 <!-- <div class="form-group row">       -->
+        <div class="row">
+        <button class="btn" style="margin-right:100px;" ng-hide="onlyOrderScreen()" ng-click="previousSection()">B a c k</button>
         <button class="btn" ng-click="nextSection()">{{nextText()}}</button>
         <h4 class="footer">Footer text goes here. It'll be really cool and shit.</h4>
 <!-- <div class="col-xs-2 col-xs-offset-5">
