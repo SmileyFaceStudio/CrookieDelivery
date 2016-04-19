@@ -43,10 +43,21 @@ angular.module('formApp', ['ngAnimate', 'ui.router', 'ngMessages'])
     );
     $rootScope.$on("$stateChangeSuccess", 
         function (event, toState, toParams, fromState, fromParams) {
-            var body = document.body,
-            html = document.documentElement;
-
-            $rootScope.height = Math.max( body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight );
+            // var body = document.body,
+            // html = document.documentElement;
+            if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+                switch(toState.name) {
+                    case 'form.order':
+                        $rootScope.height = 1415;
+                        break;
+                    case 'form.info':
+                        $rootScope.height = 1000;
+                        break;
+                    case 'form.review':
+                        $rootScope.height = 800;
+                        break;
+                }
+            }
         }
     );
 });
