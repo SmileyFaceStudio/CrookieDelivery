@@ -200,6 +200,7 @@ a[disabled] {
     color: white;
     position: absolute;
     bottom: 0;
+    right: 0;
     width: 100%;
     text-align: center;
     padding: 0 20px;
@@ -268,7 +269,7 @@ a[disabled] {
     padding-left: 25px;
 }
 
-.item-list span, .contact-info span{
+#form-views-list span, .contact-info span{
     color: white;
 }
 
@@ -310,6 +311,7 @@ a[disabled] {
     /*z-index: -1;*/
     /*padding:30px;*/
     padding-bottom: 100px;
+    transition: 2s all ease;
 }
 
 /* basic styling for entering and leaving */
@@ -319,6 +321,7 @@ a[disabled] {
     position:absolute; 
     left:30px; 
     right:30px;
+    top: 0;
     transition:1s all ease; 
     -moz-transition:1s all ease; 
     -webkit-transition:1s all ease; 
@@ -335,8 +338,41 @@ a[disabled] {
 #form-views.ng-leave { 
     -webkit-animation:slideOutLeft 1.5s both ease;
     -moz-animation:slideOutLeft 1.5s both ease;
-    animation:slideOutLeft 1.5s both ease;   
+    animation:slideOutLeft 1.5s both ease;  
 }
+
+#form-views.ng-leave.ng-leave-active,
+#form-views.ng-move,
+#form-views.ng-enter {
+  opacity:0;
+}
+
+#form-views.ng-leave,
+#form-views.ng-move.ng-move-active,
+#form-views.ng-enter.ng-enter-active {
+  opacity:1;
+}
+
+
+@media
+only screen and (-webkit-min-device-pixel-ratio: 1.5),
+only screen and (-o-min-device-pixel-ratio: 3/2),
+only screen and (min--moz-device-pixel-ratio: 1.5),
+only screen and (min-device-pixel-ratio: 1.5){
+
+  html,
+  body{
+    width:100%;
+    overflow-x:hidden;
+  }
+
+}
+
+/*@media (max-width: 766px) {
+    #signup-form {
+        min-height: 100pc;
+    }
+}*/
 
 /* ANIMATIONS
 ============================================================================= */

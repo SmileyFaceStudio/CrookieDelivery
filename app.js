@@ -40,5 +40,13 @@ angular.module('formApp', ['ngAnimate', 'ui.router', 'ngMessages'])
         function (event, toState, toParams, fromState, fromParams) {
             alertService.clear();
         }
-    )
+    );
+    $rootScope.$on("$stateChangeSuccess", 
+        function (event, toState, toParams, fromState, fromParams) {
+            var body = document.body,
+            html = document.documentElement;
+
+            $rootScope.height = Math.max( body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight );
+        }
+    );
 });

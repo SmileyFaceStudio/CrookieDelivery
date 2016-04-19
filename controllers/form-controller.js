@@ -1,5 +1,9 @@
 angular.module('formApp')
 .controller('formController', function($scope, $http, alertService, $state, $filter) {
+    // var body = document.body,
+    // html = document.documentElement;
+
+    // $scope.height = Math.max( body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight ) - 500;
     // $scope.cookies = ['chocolate_chip', 'macadamia_nut', 'white_chocolate', 'oatmeal_raisin'];
     $scope.cookies = {
         'chocolate_chip': {

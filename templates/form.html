@@ -20,7 +20,7 @@
       
       <!-- use ng-submit to catch the form submission and use our Angular function -->
       <div class="full-form">
-      <form id="signup-form" name="appForm" ng-submit="processForm()">
+      <form id="signup-form" style="min-height: {{height}}px" name="appForm" ng-submit="processForm()">
 
         <div class="alert alert-dismissible {{alert.type}}" ng-repeat="alert in alerts" type="alert.type">
           <button type="button" class="close" ng-click="alert.close()" data-dismiss="alert"><span class="glyphicon glyphicon-remove"></span></button>
