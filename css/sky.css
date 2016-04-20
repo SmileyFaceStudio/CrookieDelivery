@@ -21,10 +21,20 @@
   animation: crook 20s infinite;
 }
 
+.lantern {
+  width:100px;
+  height: 100px;
+  background:url(../assets/lighthouse_light.png) no-repeat;
+  background-size: 60px;
+  left: 28%;
+  top: 8%;
+  position:absolute;
+}
+
 .small-cloud {
 	width:100px;
 	height: 100px;
-	background:url(../assets/small_cloud.png) no-repeat;;
+	background:url(../assets/small_cloud.png) no-repeat;
 	background-size: 60px;
     left: 20%;
     top: -12%;
@@ -35,7 +45,7 @@
 .big-cloud {
 	width:100px;
 	height: 100px;
-	background:url(../assets/big_cloud.png) no-repeat;;
+	background:url(../assets/big_cloud.png) no-repeat;
 	background-size: 90px;
     left: 60%;
     top: -32%;
