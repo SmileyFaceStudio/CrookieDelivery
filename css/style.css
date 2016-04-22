@@ -301,7 +301,7 @@ a[disabled] {
 ============================================================================= */
 #signup-form { 
     position:relative; 
-    min-height:75vh; 
+    min-height:45vw; 
     overflow:hidden;
     background:linear-gradient( 0deg, #F083C2,#FD9E97 75%, #FFBFA8 );
 /*    background-image: url("/assets/city_skyline.png");
@@ -310,7 +310,7 @@ a[disabled] {
     background-position: center bottom;*/
     /*z-index: -1;*/
     /*padding:30px;*/
-    padding-bottom: 100px;
+    padding-bottom: 200px;
     transition: 2s all ease;
 }
 
