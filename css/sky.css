@@ -24,11 +24,17 @@
 .lantern {
   width:100px;
   height: 100px;
-  background:url(../assets/lighthouse_light.png) no-repeat;
-  background-size: 60px;
+  background:url(../assets/lighthouse_light.png) no-repeat;    
+  background-size: 5vw;
   left: 28%;
-  top: 8%;
+  top: 7%;
   position:absolute;
+}
+
+@media (max-width: 1200px) {
+  .lantern {
+    background-size: 60px;
+  }
 }
 
 .small-cloud {
