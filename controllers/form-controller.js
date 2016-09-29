@@ -61,7 +61,7 @@ angular.module('formApp')
         } else if ($state.current.name == "form.info") {
             return validateInfo();
         } else if ($state.current.name == "form.review") {
-            return processForm();
+            return $scope.processForm();
         }
         // switch (step) {
         //     case 1:
