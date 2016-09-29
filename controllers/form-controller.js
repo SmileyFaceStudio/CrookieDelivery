@@ -23,14 +23,17 @@ angular.module('formApp')
             image: 'assets/brown_cookie.svg'
         }
     }
-    $scope.priceTotal = 0;
-    // we will store all of our form data in this object
-    $scope.formData = {
+
+    var loadInitialData = function() {
+        $scope.priceTotal = 0;
+        // we will store all of our form data in this object
+        $scope.formData = {
             'oatmeal_raisin': 0,
             'macadamia_nut': 0,
             'white_chocolate': 0,
             'chocolate_chip': 0
-    };
+        };
+    }
 
     $scope.restrictSection = function(step) {
         if (($state.current.name == 'form.order' && step == 2) || ($state.current.name == 'form.order' && step == 3)) {
@@ -144,6 +147,9 @@ angular.module('formApp')
          .success(function(data, status) {
             if (data.success) {
                 alert('Your order is successful! We will contact you when we deliver');
+                loadInitialData();
+                $state.go('form.order');
+
             } else if (!data.success) {
                 alertService.add('warning', "Something went wrong with your form! Contact Pirate Cookie Staff.");
             }
@@ -158,5 +164,7 @@ angular.module('formApp')
             }
         };
     })();
+
+    loadInitialData();
     
 });
