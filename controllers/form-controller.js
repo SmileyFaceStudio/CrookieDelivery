@@ -143,6 +143,8 @@ angular.module('formApp')
     
     // function to process the form
     $scope.processForm = function() {
+        var date = new Date();
+        $scope.formData.Date = $filter('date')(date, "short");
         $http.post('https://sheetsu.com/apis/2ae6fdf1', $scope.formData)
          .success(function(data, status) {
             if (data.success) {
