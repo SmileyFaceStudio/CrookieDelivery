@@ -11,11 +11,11 @@ angular.module('formApp')
             image: 'assets/black_cookie.svg'
         },
         'macadamia_nut': {
-            name: 'Macadamia Nut',
+            name: 'Peanut Butter',
             image: 'assets/yellow_cookie.svg'
         },
         'white_chocolate': {
-            name: 'White Chocolate',
+            name: 'White Choco Macadamia',
             image: 'assets/pink_cookie.svg'
         },
         'oatmeal_raisin': {
